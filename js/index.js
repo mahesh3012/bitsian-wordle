@@ -4,7 +4,7 @@ let currentQues;
 let currentHint;
 async function getNewWord(id){
         //let response= await fetch(`https://bits-wordle-api.herokuapp.com/words/${id}`);
-        let response=await fetch(`http://localhost:3000/words/${id}`);
+        let response=await fetch(`http://localhost:3000/words/${id}`,{ mode: 'no-cors' });
         let data=await response.json();
         return data;
     } 
